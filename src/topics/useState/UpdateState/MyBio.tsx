@@ -36,13 +36,11 @@ export const MyBio = () => {
           const formData = new FormData(e.currentTarget);
           const formProps = Object.fromEntries(formData.entries());
 
-          // It is best practice to use the prev state when updating object to prevent overwriting the state.
-          setData((prev) => ({
-            ...prev,
+          setData({
             name: formProps.name as string,
             age: formProps.age as unknown as number,
             gender: formProps.gender as string,
-          }));
+          });
         }}
       >
         <div>
@@ -63,6 +61,23 @@ export const MyBio = () => {
 
         <button type="submit">Update bio</button>
       </form>
+
+      <button
+        type="button"
+        onClick={() => {
+          /*
+            If you want to update single property on the state, 
+            it is best practice to use the prev state when updating 
+            object to prevent overwriting the state.
+          */
+          setData((prev) => ({
+            ...prev,
+            name: "John Doe",
+          }));
+        }}
+      >
+        Update name to John Doe
+      </button>
     </div>
   );
 };
