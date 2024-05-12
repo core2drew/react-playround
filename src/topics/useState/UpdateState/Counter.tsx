@@ -4,10 +4,10 @@ export const Counter = () => {
   const [count, setCount] = useState(0);
 
   const onClickIncrease = () => {
-    setCount((prev) => prev + 1);
+    setCount(count + 1);
   };
   const onClickDecrease = () => {
-    setCount((prev) => prev - 1);
+    setCount(count + 1);
   };
 
   return (
