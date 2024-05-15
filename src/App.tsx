@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import "./App.css";
 
 import { UpdateTitle } from "./topics/useEffect/WithDependency/UpdateTitle";
@@ -16,7 +17,7 @@ function App() {
       {/* <MyBio /> */}
 
       {/* useEffect topics */}
-      <UpdateTitle />
+      {/* <UpdateTitle /> */}
     </>
   );
 }
